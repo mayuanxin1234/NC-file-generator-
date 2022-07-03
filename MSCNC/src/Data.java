@@ -41,9 +41,13 @@ public class Data {
 
     public void writeFile(int startR, int startC, int endR, int endC, String fileName) throws IOException {
 
-            FileWriter myWriter = new FileWriter(fileName + "\\NC.txt");
+            FileWriter myWriter = new FileWriter(fileName + "\\One Cutter.txt");
             for (int i = startC - 1; i < endC; i++) {
-                for (int j = startR - 1; j < endR; j++) {
+                for (int a = 0; a < 3; a++) {
+                    myWriter.write(lines.get(a + i * 75));
+                    myWriter.write("\n");
+                }
+                for (int j = startR; j < endR; j++) {
                         myWriter.write(lines.get(j + i * 75));
                         myWriter.write("\n");
                 }
